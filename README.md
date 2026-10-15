@@ -1,50 +1,84 @@
-# Welcome to your Expo app 👋
+# Temoco
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O **Temoco** é um aplicativo mobile idealizado como Trabalho de Conclusão de Curso do Técnico em Desenvolvimento de Sistemas do SENAI. A proposta é oferecer uma experiência lúdica de apoio à rotina e à aprendizagem de crianças autistas, com personagens, tarefas e jogos, além de uma área destinada aos responsáveis.
 
-## Get started
+Este repositório reúne a parte do projeto em que atuei no desenvolvimento das interfaces e na organização da aplicação.
 
-1. Install dependencies
+## Design do projeto
 
-   ```bash
-   npm install
-   ```
+Os protótipos das telas foram criados no Figma.
 
-2. Start the app
+**[Visualizar o projeto Temoco no Figma](https://www.figma.com/design/bXKAvjbw4N3POnmn5UdG2W/Temoco?node-id=6-2&t=36m81q4NpZZTs9c2-1)**
 
-   ```bash
-   npx expo start
-   ```
+## Áreas do aplicativo
 
-In the output, you'll find options to open the app in a
+O projeto reúne interfaces para diferentes etapas da experiência:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Cadastro e personalização inicial
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Telas de abertura, cadastro e login.
+- Campos para informações do responsável e da criança.
+- Questionário inicial para orientar a personalização da experiência.
+- Preferências visuais e sonoras, como brilho, música, efeitos sonoros e tamanho da fonte.
 
-## Get a fresh project
+### Área infantil
 
-When you're ready, run:
+- Tela principal com acesso ao perfil, às tarefas e aos jogos.
+- Perfil da criança com indicadores de pontos, tarefas e jogos.
+- Seleção de personagens, incluindo opções liberadas e bloqueadas.
+- Menu com tarefas concluídas e pendentes.
+- Menus e telas relacionados a jogos, diário de missões e amigos.
+- Elementos de progressão, como pontos e Tomocoins.
 
-```bash
-npm run reset-project
+### Área dos responsáveis — Mamãe Ganso
+
+- Telas de relatórios e visualização de desempenho.
+- Gerenciamento de perfis das crianças.
+- Configurações da experiência.
+- Área de Tomocoins e apresentação de planos de assinatura.
+- Mural de publicações, incluindo uma interface para perfil profissional.
+
+> **Nota sobre o escopo:** os itens acima descrevem as interfaces e os fluxos representados no projeto. Nem todas as funcionalidades planejadas foram concluídas ou conectadas a serviços e dados persistentes.
+
+## Minha contribuição
+
+Atuei no projeto como **Scrum Master e desenvolvedora**. Criei os protótipos das telas no Figma e implementei as interfaces no aplicativo, trabalhando na estrutura visual das áreas infantil e dos responsáveis. Também participei da organização do desenvolvimento e deixei a aplicação preparada para a continuidade do trabalho e uma futura integração com banco de dados.
+
+## Tecnologias
+
+As principais tecnologias e bibliotecas utilizadas ou declaradas no projeto incluem:
+
+- **React Native** — desenvolvimento da interface mobile.
+- **Expo** — ferramentas e ambiente para desenvolvimento React Native.
+- **TypeScript** — tipagem do código.
+- **Expo Router** — organização das rotas e da navegação.
+- **NativeWind e Tailwind CSS** — estilização das interfaces.
+- **Clerk Expo, Async Storage, Expo SecureStore e React Native Chart Kit** — bibliotecas presentes nas dependências do projeto para recursos como autenticação, armazenamento e gráficos.
+
+A presença de uma biblioteca nas dependências não significa que sua integração esteja completa ou funcionando em todos os fluxos.
+
+## Estrutura geral
+
+```text
+TCC-Temoco/
+├── android/          # Projeto nativo Android
+├── src/
+│   ├── app/           # Rotas e telas da aplicação
+│   │   ├── (auth)/    # Área relacionada à autenticação
+│   │   ├── (main)/    # Área principal
+│   │   ├── (mmg)/     # Área Mamãe Ganso
+│   │   └── (new)/     # Fluxos adicionais
+│   ├── assets/        # Recursos visuais
+│   ├── components/   # Componentes reutilizáveis
+│   ├── context/      # Contextos da aplicação
+│   └── styles/       # Estilos globais
+├── app.json          # Configurações do Expo
+├── package.json      # Dependências e scripts
+└── tsconfig.json     # Configuração do TypeScript
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Estado do projeto
 
-## Learn more
+O Temoco permaneceu como um projeto acadêmico em desenvolvimento, e não como um produto finalizado. Algumas telas e fluxos foram implementados parcialmente; outros comportamentos planejados, incluindo partes da experiência de carregamento, não foram concluídos. A integração final com banco de dados também ficou para uma etapa futura.
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Por isso, este repositório deve ser entendido como um registro do trabalho desenvolvido no TCC — especialmente das interfaces e da estrutura preparada para continuidade — e não como uma versão pronta para produção. A documentação não descreve as telas do protótipo como funcionalidades completas quando isso não foi confirmado.
